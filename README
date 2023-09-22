@@ -1,0 +1,20 @@
+Small PHP/HTML application built for an interview.
+
+Allows sharing/processing of a CSV file matching a specified format, and subsequent display of results based on that data.
+
+Requirements: 
+# PHP 7.4 CLI SAPI (so you have the PHP built-in development server).
+
+Launch Instructions:
+# Decompress me (if you're reading this, you probably did this already.)
+# Within CLI: 
+#   # Verify your PHP version by using `php -v` and ensure that you are running PHP 7.4 CLI.
+#   # Navigate to directory `csvreporter` inside the decompressed folder
+#   # Run `php -S localhost:8000` to launch the PHP CLI's built-in server. Note: if you receive an error, you should try another port, eg. 8080.
+#   # On a web browser, go to http://localhost:8000 (or whichever alternative port you specified above).
+
+For a look at some example inputs, please review the test files within the `test/` folder. These include multiple invalid inputs and edge cases which I have coded recoveries for where possible (eg. additional spaces in the CSV entries).
+
+NOTE: I actually built two versions of the ExpenseCollection class, one which is more fun/showy and one which is more efficient. The fun/showy one is in ExpenseCollection.php and the more efficient alternative is in ExpenseCollectionAlternative.php.
+If you want to look at and/or try out the alternative, the best way to do so is to update the include statement in ReportCsvParser.php
+to use the other file. (Note: the line for this exists & is commented out)

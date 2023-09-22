@@ -1,0 +1,87 @@
+table,
+td, th {
+    border: 1px solid #333;
+    padding:1px;
+}
+
+td, th {
+    padding:5px;
+}
+
+th {
+    background-color: #555;
+    color: #fff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Error message text color */
+.error {
+    color: red;
+}
+
+/* Define the boundary/border for the box containing the action sections */
+.border-box {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding:1rem;
+    display:inline-block;
+}
+
+.report-container {
+    /*
+     * To make navigation easier we define some simple criteria to contain the expense report table within a reasonable boundary.
+     * This makes it so that ridiculous data entered in doesn't cause the page to be utterly unusable
+     */
+    max-height:70vh; 
+    width:max-content; 
+    max-width:80vw; 
+    overflow-x:auto;
+}
+.report-container th {
+    /* We don't want header names to get wrapped (this is useful as it defines a handy minimum width for the Total Cost */
+    white-space:nowrap;
+    /* Let's attach the headers to the report container at the top, just in case we get a very long table */
+    position:sticky; 
+    top:0px;
+}
+.report-container td {
+    /* But we don't mind if the table content gets wrapped if it's very very large */
+    word-break: break-all;
+}
+
+.scroll-shadows {
+
+background:
+/* Shadow Cover TOP */
+linear-gradient(
+  white 30%,
+  rgba(255, 255, 255, 0)
+) center top,
+
+/* Shadow Cover BOTTOM */
+linear-gradient(
+  rgba(255, 255, 255, 0), 
+  white 70%
+) center bottom,
+
+/* Shadow TOP */
+radial-gradient(
+  farthest-side at 50% 0,
+  rgba(0, 0, 0, 0.2),
+  rgba(0, 0, 0, 0)
+) center top,
+
+/* Shadow BOTTOM */
+radial-gradient(
+  farthest-side at 50% 100%,
+  rgba(0, 0, 0, 0.2),
+  rgba(0, 0, 0, 0)
+) center bottom;
+
+background-repeat: no-repeat;
+background-size: 100% 40px, 100% 40px, 100% 40px, 100% 40px;
+background-attachment: local, local, scroll, scroll;
+}
