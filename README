@@ -1,4 +1,4 @@
-Small PHP/HTML application built for an interview.
+Small PHP/HTML application for CSV analysis.
 
 Allows sharing/processing of a CSV file matching a specified format, and subsequent display of results based on that data.
 
