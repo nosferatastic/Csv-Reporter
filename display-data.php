@@ -24,10 +24,10 @@ if(isset($totals)) {
             ?>
                 <tr>
                     <td>
-                        <?php echo($category);?>
+                        <?php echo(htmlspecialchars($category));?>
                     </td>
                     <td class="number-col">
-                        <?php echo($total);?>
+                        <?php echo(htmlspecialchars($total));?>
                     </td>
                 </tr>
             <?php 
